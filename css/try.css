@@ -261,7 +261,7 @@
        grid-template-columns: 1fr ;
        grid-template-rows: 1fr 1fr  ;
        
-       
+       margin: 3em;
        
    }
    .image{
@@ -312,7 +312,6 @@
    left:50%;
    top:85%;
    margin-left:-5em;
-   
    width:10em;
    height:10em;
    padding:4em 2em;
