@@ -1,0 +1,40 @@
+
+
+
+
+ 
+ /*cursor eyes*/
+ .eyes{
+    position: absolute;
+    display: flex;
+    top:0;
+    left:0;
+    z-index: 9900;
+  }
+  
+  .eye{
+    position: relative;
+    background-color: #EEA7EE;
+    display: inline-block;
+    width: 3em;
+    height:3em;
+    margin:0 .3em;
+    border-radius: 50%;
+    z-index: 9900;
+  
+  }
+  
+  .eyes .eye::before{
+    content:'';
+    position: absolute;
+    top:50%;
+    left:30%;
+    transform: translate(-50%, -50%);
+    width: 1.5em;
+    height:1.5em;
+    background: rgb(248, 248, 248);
+    border-radius: 50%;
+    z-index: 9900;
+}
+
+ /* end cursor eyes*/

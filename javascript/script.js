@@ -12,9 +12,17 @@ const navSlide = () => {
 
 navSlide()
 
+document.addEventListener('DOMContentLoaded', nav)
+function nav(){
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.main-nav');
+    burger.addEventListener('click', ()=>{
+        nav.classList.toggle('show')
+    })
+}
 
 
-// moving cursor
+// moving cursor //
 const cursor = document.querySelector(".eyes")
 let mouseX = 0
 let mouseY = 0
@@ -57,21 +65,8 @@ $('body').mousemove(function(event) {
   });
 });
         
+// end moving cursor //
 
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {myFunction()};
 
@@ -83,12 +78,17 @@ var sticky = header.offsetTop;
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
-  if (window.pageYOffset > sticky) {
+  if (window.pageYOffset >= sticky) {
     header.classList.add("sticky");
+    document.body.style.paddingTop = header.offsetHeight + 'px';
   } else {
+    document.body.style.paddingTop = 0;
     header.classList.remove("sticky");
   }
 }
+
+
+
 
     (function(window, undefined) // Code in a function to create an isolate scope
 {
@@ -156,6 +156,7 @@ function myFunction() {
     
 })(window);
 
+// slider //
 
 var $ticker = $('[data-ticker="list"]'),
     tickerItem = '[data-ticker="item"]'
@@ -195,6 +196,52 @@ function initializeTicker(){
 
 initializeTicker();
 
+// end slider //
+
+// image //
+
+
+
+
+
+
+// image end //
+
+
+
+/* 
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+
+
+*/
+
+
+
+
+$(window).scroll( function(){
+
+  //get scroll position
+  var topWindow = $(window).scrollTop();
+  //multipl by 1.5 so the arrow will become transparent half-way up the page
+  var topWindow = topWindow * 1.5;
+  
+  //get height of window
+  var windowHeight = $(window).height();
+      
+  //set position as percentage of how far the user has scrolled 
+  var position = topWindow / windowHeight;
+  //invert the percentage
+  position = 1 - position;
+
+  //define arrow opacity as based on how far up the page the user has scrolled
+  //no scrolling = 1, half-way up the page = 0
+  $('.arrow-wrap').css('opacity', position);
+
+});
 
 
 

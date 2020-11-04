@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+ }
+ 
+ html {
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+ }
+ 
+
+/* first page*/
+ 
+.box1{
+   background-image: url(../images/bakgrund-flytande.png);
+   background-size: cover;
+   height: 90%;
+   margin-left: 3em;
+   margin-right: 3em;
+   margin-bottom: 3em;
+   align-items: center;
+   justify-content: center;
+   perspective: 1000px;
+   perspective-origin: 50% 50%;
+   animation: animation 10s linear infinite;
+}
+
+@keyframes animation {
+   100%{
+    background-position:0px -3000px;
+  }
+}
+
+.bakimg{
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+
+  
+}
+
+
+
+/* end first page*/
+
+/*grid images portfolio*/
+ 
+ .section-grid {
+   display: grid;
+   background-color: rgb(255, 255, 255);
+   grid-template-columns: 1fr 1fr ;
+   grid-template-rows: 1fr ;  
+   margin: 3em;
+   grid-gap: 3em;
+}
+
+.grid1{
+   background-color: rgb(255, 255, 255);
+  
+   
+   justify-content: center;
+   text-align: center;
+   vertical-align: middle;
+
+ 
+   
+   
+}
+.grid2{
+   background-color: rgb(255, 255, 255);
+   
+   text-align: center;
+   vertical-align: middle;
+
+   
+}
+
+.coolText1{
+ 
+   color: #8BBEDF;
+  
+  font-family: 'Asset', cursive;
+  font-size: 1.2rem;
+  
+}
+.coolText2{
+
+    color: #8BBEDF;
+  
+   font-family: 'Asset', cursive;
+   font-size: 1.2rem;
+ }
+
+
+ @media screen and (max-width: 850px) {
+   .section-grid {
+       grid-template-columns: 1fr ;
+       grid-template-rows: 1fr 1fr  ;
+       
+       
+       
+   }
+   .coolText2, .coolText1{
+   
+      font-size: 1rem;
+    }
+
+}
+@media screen and (max-width: 700px) {
+ 
+   .coolText2, .coolText1{
+   
+      font-size: .8rem;
+    }
+
+}
+
+
+
+
+
+/* end grid images portfolio*/
+ 
+
+
+ 
+ img {
+    width: 100%;
+    transition: .5s ease;
+ }
+ 
+
+
+
+ 
+ .background {
+   height: 70%;
+   margin-left: 3em;
+   margin-right: 3em;
+   align-items: center;
+   justify-content: center;
+   background-color: #ffffff;
+   display: flex;
+   justify-content: center;
+
+}
+
+.image{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+   background-size: cover;
+   height: 70%;
+   align-items: center;
+   justify-content: center;
+   
+}
+ 
+ 
+ .about-text{
+   padding-top: 1em;
+   text-align: center;
+    color: rgb(109, 99, 255);
+    text-transform: uppercase;
+    font-family: 'Asset', cursive;
+    font-size: 2rem;
+   
+ }
+
+
+
+.ticker__viewport {
+    height: auto;
+    font-size: 1.5em;
+    
+    background: #93E9AD;
+    font-family: 'Asset', cursive;
+    color: #fff;
+    overflow: hidden;
+    padding: .5em 0;
+    
+    margin-top: 3em;
+    
+}
+
+.ticker__list {
+    
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.ticker__item {
+    display: inline-block;
+    white-space: nowrap;
+    
+}
+
+.text-center{
+    text-align: center;
+}
+
+@media screen and (max-width: 800px){
+   .ticker__viewport {
+      height: auto;
+      font-size: 1em;
+      
+      background: #93E9AD;
+      font-family: 'Asset', cursive;
+      color: #fff;
+      overflow: hidden;
+      padding: .5em 0;
+      
+      margin-top: 3em;
+      
+  }
+
+}
+
+
+
+.about{
+   height: 100vh;
+
+   margin: 3em;
+}
+
+.about-p{
+   margin-top: 2em;
+   font-family: 'Asset', cursive;
+   width: 70%;
+   color:  #EEA7EE;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+
+
+ .portfolioImage {
+ 
+    
+   display: grid;
+   grid-template-columns: 1fr 1fr ;
+   grid-template-rows: 1fr ;  
+   margin: 6em;
+   grid-gap: 3em;
+   
+}
+
+@media screen and (max-width: 800px) {
+   .portfolioImage {
+       grid-template-columns: 1fr ;
+       grid-template-rows: 1fr 1fr  ;
+       
+       
+       
+   }
+   .image{
+       
+      width: 80%;
+      background-size: cover;
+      height: 80%;
+      
+   }
+
+
+}
+
+
+
+
+
+ footer {
+   background-color:#93E9AD;
+  color: #fff;
+
+  height: 10em;
+   align-items: center;
+   justify-content: center;
+}
+
+.headerText {
+   color: #ffffff;
+  
+   width: 30%;
+   text-transform: uppercase;
+   font-family: 'Asset', cursive;
+   
+   position: absolute;
+   top: 50%;
+   left: 30%;
+   transform: translate(-50%, -50%);
+   
+}
+
+
+ 
+ .arrow-wrap {
+   background-image: url(/images/smile.png);
+   background-size: cover;
+   position:absolute;
+   z-index:1;
+   left:50%;
+   top:85%;
+   margin-left:-5em;
+   
+   width:10em;
+   height:10em;
+   padding:4em 2em;
+   border-radius:50%;
+   font-size:0.5em;
+   display:block;
+   -moz-animation: bounce 2s infinite;
+   -webkit-animation: bounce 2s infinite;
+   animation: bounce 2s infinite;
+   
+ }
+
+ 
+ .hint {
+
+   position:absolute;
+   top:0.6em;
+   width:100%;
+   left:0;
+   font-size:2em;
+   font-style:italic;
+   text-align:center;
+   color:#fff;
+   opacity:0;
+
+ }
+ 
+ @keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {
+     transform: translateY(0);
+   }
+   40% {
+     transform: translateY(-30px);
+   }
+   60% {
+     transform: translateY(-15px);
+   }
+ }
+
+ 
+ 
+   @-webkit-keyframes arrows {
+     0% { top:0; }
+     10% { top:12%; }
+     20% { top:0; }
+     30% { top:12%; }
+     40% { top:-12%; }
+     50% { top:12%; }
+     60% { top:0; }
+     70% { top:12%; }
+     80% { top:-12%; }
+     90% { top:12%; }
+     100% { top:0; }
+   }
+   
+   .arrow-wrap .arrow {
+      background-image: url(/smile.png);
+     -webkit-animation: arrows 2.8s 0.4s;
+     -webkit-animation-delay: 3s;
+   }
+ 
+   #section01 { background: url(/smile.png) center center / cover no-repeat;}
+   
+   .myPicture{
+      width: 30%;
+      
+   }
+
+   .donoutImg{
+      width: 20%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      animation: rotation 4s infinite linear;
+   }
+
+
+   @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+
+   @media screen and (max-width: 800px) {
+      .donoutImg{
+         width: 30%;
+        
+      } 
+   }
+
