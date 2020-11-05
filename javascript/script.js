@@ -2,13 +2,26 @@
 const navSlide = () => {
   const burger = document.querySelector('.burger')
   const nav = document.querySelector('.nav-links')
+  const navLinks = document.querySelectorAll('.nav-links li')
 
 
   burger.addEventListener('click', () => {
     nav.classList.toggle('nav-active')
     
-  })
+ 
+  navLinks.forEach((link,index)=>{
+      if(link.style.animation){
+          link.style.animarion = ''
+      } else{
+        link.style.animation = `navLinkFade 0.5s ease forwards ${index/4+0.5}s`;
+      }
+
+    }) 
+    
+})
 }
+
+
 
 navSlide()
 
@@ -239,9 +252,67 @@ $(window).scroll( function(){
 
   //define arrow opacity as based on how far up the page the user has scrolled
   //no scrolling = 1, half-way up the page = 0
-
+  $('.arrow-wrap').css('opacity', position);
 
 });
 
 
 
+var text = document.getElementById('text');
+var word = text.getElementsByTagName('span');
+var i = 0;
+
+function rotator() {
+  word[i].style.display = 'none';
+  i = (i + 1) % word.length;
+  word[i].style.display = 'initial';
+}
+
+setInterval(rotator, 900);
+
+
+
+
+var dance = {
+  
+    init: function() {
+      this.dance();
+    },
+    
+    config: {
+      newSize: 40,
+    },
+    
+    dance: function(config) {
+      var newText = '',
+          h1 = $('h1'),
+          text = $('h1').text(),
+          oldSize = h1.css('font-size'),
+          length = text.length,
+          i;
+    
+      for( i = 0; i < length; i++ ) {
+        
+        newText += '<span>' + text.charAt(i) + '</span>';    
+      }
+      
+      h1.html(newText);
+      
+      h1.on('mouseenter mouseleave', 'span', function(e) {
+        var span = $(this);
+        
+        if( e.type == 'mouseenter') {
+           
+          span.stop(true,false).animate({fontSize: dance.config.newSize + 'px'});
+          
+        } else if( e.type == "mouseleave" ) {
+          
+          span.animate({fontSize: oldSize});
+        }  
+      });
+    }
+  };
+  
+  $(function() {
+    dance.init();
+  });
