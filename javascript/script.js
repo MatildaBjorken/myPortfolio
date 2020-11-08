@@ -280,7 +280,7 @@ var dance = {
     },
     
     config: {
-      newSize: 40,
+      newSize: 30,
     },
     
     dance: function(config) {
@@ -319,3 +319,47 @@ var dance = {
 
 
   
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.about-text');
+
+
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.about-text .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.about-text',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+
+  ScrollReveal({ duration: 1000 })
+
+  ScrollReveal().reveal('.coolText');
+  ScrollReveal().reveal('.coolText');
+  ScrollReveal().reveal('.headline');
+  
+  ScrollReveal().reveal('.image', { delay: 300 });
+  ScrollReveal().reveal('.about-p', { delay: 200 });
+  
+  ScrollReveal().reveal('.about', { delay: 300 });
+  
+  ScrollReveal().reveal('.portfolioImage', { duration: 2000 });
+  ScrollReveal().reveal('.candidate', { interval: 300 });
+  
+  ScrollReveal().reveal('.section-grid', { duration: 2000 });
+  ScrollReveal().reveal('.fade', { interval: 300 });
+  
+  
+  
+  
+  ScrollReveal({ duration: 1000 })
