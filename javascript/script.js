@@ -1,4 +1,4 @@
-
+// hamburger menu//
 const navSlide = () => {
   const burger = document.querySelector('.burger')
   const nav = document.querySelector('.nav-links')
@@ -21,8 +21,6 @@ const navSlide = () => {
 })
 }
 
-
-
 navSlide()
 
 document.addEventListener('DOMContentLoaded', nav)
@@ -33,7 +31,7 @@ function nav(){
         nav.classList.toggle('show')
     })
 }
-
+//end hamburger menu//
 
 // moving cursor //
 const cursor = document.querySelector(".eyes")
@@ -80,6 +78,8 @@ $('body').mousemove(function(event) {
         
 // end moving cursor //
 
+//sticky header//
+
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {myFunction()};
 
@@ -100,8 +100,9 @@ function myFunction() {
   }
 }
 
+// end sticky header//
 
-
+// scroll function//
 
     (function(window, undefined) // Code in a function to create an isolate scope
 {
@@ -169,6 +170,8 @@ function myFunction() {
     
 })(window);
 
+// end scroll function//
+
 // slider //
 
 var $ticker = $('[data-ticker="list"]'),
@@ -209,31 +212,7 @@ function initializeTicker(){
 
 initializeTicker();
 
-// end slider //
-
-// image //
-
-
-
-
-
-
-// image end //
-
-
-
-/* 
-$(".hover").mouseleave(
-  function () {
-    $(this).removeClass("hover");
-  }
-);
-
-
-*/
-
-
-
+// smilie //
 
 $(window).scroll( function(){
 
@@ -256,7 +235,10 @@ $(window).scroll( function(){
 
 });
 
+// end smilie //
 
+
+//hover matilda //
 
 var text = document.getElementById('text');
 var word = text.getElementsByTagName('span');
@@ -269,8 +251,6 @@ function rotator() {
 }
 
 setInterval(rotator, 900);
-
-
 
 
 var dance = {
@@ -317,30 +297,9 @@ var dance = {
     dance.init();
   });
 
+// end hover matilda //
 
-  
-// Wrap every letter in a span
-var textWrapper = document.querySelector('.about-text');
-
-
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.about-text .letter',
-    opacity: [0,1],
-    easing: "easeInOutQuad",
-    duration: 2250,
-    delay: (el, i) => 150 * (i+1)
-  }).add({
-    targets: '.about-text',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-
-
+// scroll reveal //
 
   ScrollReveal({ duration: 1000 })
 
@@ -350,6 +309,7 @@ anime.timeline({loop: true})
   
   ScrollReveal().reveal('.image', { delay: 300 });
   ScrollReveal().reveal('.about-p', { delay: 200 });
+  ScrollReveal().reveal('.portfolio-p', { delay: 200 });
   
   ScrollReveal().reveal('.about', { delay: 300 });
   
@@ -358,8 +318,99 @@ anime.timeline({loop: true})
   
   ScrollReveal().reveal('.section-grid', { duration: 2000 });
   ScrollReveal().reveal('.fade', { interval: 300 });
-  
-  
-  
-  
+
   ScrollReveal({ duration: 1000 })
+
+// end scroll reveal //
+
+// pop snakes//
+
+  let popped = 0;
+  
+  const targets = document.querySelectorAll('.target')
+
+  targets.forEach(target => target.addEventListener('click' ,makeTransparent))
+  
+  function makeTransparent (e) {
+    e.stopImmediatePropagation()
+    console.log(e.target)
+    e.target.style.opacity = 0
+    
+    ++popped
+    e.target.textContent = "POP!";
+    
+    checkAllPopped();
+  }
+
+function checkAllPopped(){
+    if (popped === 6){
+        console.log('all popped!');
+        let gallery = document.querySelector('#balloon-gallery');
+        let message = document.querySelector('#yay-no-balloons');
+        gallery.innerHTML = '';
+        message.style.display = 'block';
+    }
+};
+
+// end pop snakes//
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+//Make the DIV element draggagle:
+dragElement(document.getElementById("myBee"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+

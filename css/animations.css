@@ -14,7 +14,7 @@
   
   .eye{
     position: relative;
-    background-color: #3c3c3c;
+    background-color: #7a7a7a;
     display: inline-block;
     width: 3em;
     height:3em;
@@ -38,3 +38,60 @@
 }
 
  /* end cursor eyes*/
+
+/* news ticker*/
+
+ .ticker__viewport {
+	height: auto;
+	font-size: 1.5em;
+	background: #93E9AD;
+	font-family: 'Asset', cursive;
+	color: #fff;
+	overflow: hidden;
+	padding: .5em 0;
+	margin-top: 3em;
+}
+
+.ticker__list {
+	padding: 0;
+	margin: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.ticker__item {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+
+@media screen and (max-width: 800px) {
+	.ticker__viewport {
+		height: auto;
+		font-size: 1em;
+		background: #93E9AD;
+		font-family: 'Asset', cursive;
+		color: #fff;
+		overflow: hidden;
+		padding: .5em 0;
+		margin-top: 3em;
+	}
+}
+
+/* end news ticker*/
+
+.word-animation, .word-animation2, .word-animation3, .word-animation4, .word-animation6{
+	font-weight: 800;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+  }
+  
+.word-animation .word, .word-animation2 .word2 ,.word-animation3 .word3 ,.word-animation4 .word4,.word-animation5 .word5,  .word-animation6 .word6{
+	display: inline-block;
+	line-height: 2em;
+  }
+
+
+  
