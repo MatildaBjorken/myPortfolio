@@ -43,7 +43,7 @@
 
  .ticker__viewport {
 	height: auto;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	background: #93E9AD;
 	font-family: 'Asset', cursive;
 	color: #fff;
@@ -68,14 +68,9 @@
 
 @media screen and (max-width: 800px) {
 	.ticker__viewport {
-		height: auto;
-		font-size: 1em;
-		background: #93E9AD;
-		font-family: 'Asset', cursive;
-		color: #fff;
-		overflow: hidden;
-		padding: .5em 0;
 		margin-top: 3em;
+		font-size: 1.2rem;
+		
 	}
 }
 

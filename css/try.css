@@ -19,7 +19,7 @@ img {
 /* first page*/
 
 .landingPage {
-	background-image: url(/images/bakgrund-färg.png);
+	background-image: url(./bakgrund-färg.png);
 	background-size: cover;
 	height: 90%;
 	margin-left: 3em;
@@ -284,6 +284,12 @@ img {
 	.donoutImg {
 		width: 30%;
 	}
+	.myPicture {
+		width: 70%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -504,32 +510,39 @@ img {
 	align-items: center;
 }
 
+
 @media screen and (max-width: 900px) {
-	.snake-grid {
-		margin-left: 6em;
-		margin-right: 6em;
-		grid-gap: 2rem;
-	}
-	.pop-text {
-		font-size: .8rem;
-	}
+    .snake-grid {
+        margin-left: 6em;
+        margin-right: 6em;
+        grid-gap: 2rem;
+    }
+    .pop-text {
+        margin-left: 6em;
+        margin-right: 6em;
+        font-size: 1rem;
+    
+    }
 }
 
 @media screen and (max-width: 700px) {
-	.snake-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr;
-		margin-top: 3em;
-		bottom: 3em;
-		margin-left: 3em;
-		margin-right: 3em;
-		grid-gap: 1rem;
-	}
-	.pop-text {
-		font-size: .6rem;
-	}
+    .snake-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin-top: 3em;
+        bottom: 3em;
+        margin-left: 3em;
+        margin-right: 3em;
+        grid-gap: 1rem;
+    }
+    .pop-text {
+        margin-left: 6em;
+        margin-right: 6em;
+        font-size: .6rem;
+    }
 }
+
 
 .link {
 	padding: 15px 30px;
@@ -720,3 +733,14 @@ img {
 	
 	position:relative;
   }
+
+  @media screen and (max-width: 800px) {
+	.img-wrap:hover .show-me {
+		display:block;
+		width: 25%;
+		position:absolute;
+		top:0;
+		left:10%;
+		transition: transform 0.5s;
+	 }
+}
