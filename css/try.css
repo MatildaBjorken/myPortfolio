@@ -19,7 +19,7 @@ img {
 /* first page*/
 
 .landingPage {
-	background-image: url(./bakgrund-färg.png);
+	background-image: url(/images/bakgrund-färg.png);
 	background-size: cover;
 	height: 90%;
 	margin-left: 3em;
@@ -207,17 +207,17 @@ img {
 @media screen and (max-width: 700px) {
 	.about-text {
 		margin-top: 3em;
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 	.about-p {
-		width: 90%;
+		width: 80%;
 		margin-top: 3em;
 		margin-bottom: 3em;
 		font-size: .8rem;
 	}
 	.portfolio-text {
 		margin-top: 3em;
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 	.portfolio-p {
 		width: 80%;
@@ -738,6 +738,17 @@ img {
 	.img-wrap:hover .show-me {
 		display:block;
 		width: 25%;
+		position:absolute;
+		top:0;
+		left:10%;
+		transition: transform 0.5s;
+	 }
+}
+
+@media screen and (max-width: 600px) {
+	.img-wrap:hover .show-me {
+		display:block;
+		width: 30%;
 		position:absolute;
 		top:0;
 		left:10%;
