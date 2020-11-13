@@ -4,10 +4,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Matilda Björk 😎</title>
 
+
+<script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  
    <!-- librarys -->
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="https://unpkg.com/scrollreveal@4"></script>
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
@@ -25,7 +28,7 @@
    <link rel="stylesheet" href="./css/animations.css">
    <link rel="stylesheet" href='./css/header.css'>
 
-
+   
 </head>
 <body>
   <!-- header -->
@@ -189,7 +192,7 @@
             <h3 class="word-animation5">
               <span class="word5">view</span>
               <span class="word5">project</span>
-              <span class="word">5</span>
+              <span class="word5">5</span>
             </h3>
            </div>  <a  class="candidate-name" href="#">look!</a><img src="./5.png"></div>
 
@@ -229,7 +232,7 @@
      <section  class='about'>
   
             <h2 class='about-text'> About me</h2>
-            <p class='about-p'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, consequuntur hic id dolore voluptates, pariatur eius veniam totam cumque laceat iure. harum adipisci 
+            <p class='about-p'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, consequuntur hic id dolore voluptates, pariatur eius veniam totam cumque laceat iure.
               <br><br>
               iste beatae sapiente. Vel recusandae ea placeat iu amet convoluptates, pariatur eius veniam totam cumque optio harum adipisci iste beatae sapiente. Vel recusandae ea placeat iure.</p>
           </p>
@@ -252,15 +255,15 @@
 
        
  <section class= 'snake-grid'>
-        <div class="balloon"><img src="./images/orm1.png" alt="" class='target'></div>
+        <div ><img src="./images/orm1.png" alt="" class='target'></div>
 
 
-        <div class="balloon"><img src="./images/orm2.png" alt="" class='target'></div>
-        <div class="balloon"><img src="./images/orm3.png" alt="" class='target'></div>
+        <div ><img src="./images/orm2.png" alt="" class='target'></div>
+        <div><img src="./images/orm3.png" alt="" class='target'></div>
 
-        <div class="balloon"><img src="./images/orm3.png" alt="" class='target'></div>
-        <div class="balloon"><img src="./images/orm1.png" alt="" class='target'></div>
-        <div class="balloon"><img src="./images/orm2.png" alt="" class='target'></div>
+        <div ><img src="./images/orm3.png" alt="" class='target'></div>
+        <div><img src="./images/orm1.png" alt="" class='target'></div>
+        <div><img src="./images/orm2.png" alt="" class='target'></div>
 
 </section>
 </div>
@@ -299,6 +302,45 @@
 <!-- end footer-->
 <script src="./javascript/script.js"></script>
 <script src="./javascript/word-animation.js"></script>
+
+<script src="https://unpkg.com/scrollreveal@4"></script>
+<script>
+  ScrollReveal({ duration: 1000 })
+</script>
+
+
+
+
+<script >
+  
+ ScrollReveal({ duration: 1000 })
+    ScrollReveal({ reset: true });
+    
+    
+    ScrollReveal().reveal('.portfolio-text', { delay: 500 })
+        ScrollReveal().reveal('.portfolio-p', { delay: 2000 })
+    
+    ScrollReveal().reveal('.image', { delay: 300 });
+    ScrollReveal().reveal('.about-p', { delay: 400 });
+    
+    ScrollReveal().reveal('.donoutImg', { delay: 100 });
+    
+ 
+    
+    ScrollReveal().reveal('.portfolioImage', { duration: 2000 });
+    ScrollReveal().reveal('.candidate', { interval: 500 });
+    
+    
+    ScrollReveal().reveal('.about', { delay: 300 });
+    ScrollReveal().reveal('.img-wrap', {delay: 300});
+    
+    
+    ScrollReveal().reveal('.snake-grid', { duration: 2000 });
+    ScrollReveal().reveal('.target', { interval: 500 });
+    
+    ScrollReveal({ duration: 1000 })
+    
+</script>
 
 </body>
 </html>

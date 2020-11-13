@@ -1,3 +1,8 @@
+
+    
+
+
+
 // hamburger menu//
 const navSlide = () => {
   const burger = document.querySelector('.burger')
@@ -300,31 +305,6 @@ var dance = {
 // end hover matilda //
 
 // scroll reveal //
-
-  ScrollReveal({ duration: 1000 })
-
-  ScrollReveal().reveal('.coolText');
-  ScrollReveal().reveal('.coolText');
-  ScrollReveal().reveal('.headline');
-  
-  ScrollReveal().reveal('.image', { delay: 300 });
-  ScrollReveal().reveal('.about-p', { delay: 200 });
-  ScrollReveal().reveal('.portfolio-p', { delay: 200 });
-  
-  ScrollReveal().reveal('.about', { delay: 300 });
-  ScrollReveal().reveal('.myPicture', { delay: 200 });
-  
-  ScrollReveal().reveal('.portfolioImage', { duration: 2000 });
-  ScrollReveal().reveal('.candidate', { interval: 300 });
-
-  ScrollReveal().reveal('.snake-grid', { duration: 2000 });
-  ScrollReveal().reveal('.target', { interval: 300 });
-  
-  ScrollReveal().reveal('.section-grid', { duration: 2000 });
-  ScrollReveal().reveal('.fade', { interval: 200 });
-
-  ScrollReveal({ duration: 1000 })
- 
 
 // end scroll reveal //
 

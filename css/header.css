@@ -248,25 +248,23 @@ footer {
  
    background-color: #93E9AD;
    color: #fff;
-   height: 15%;
-   align-items: center;
-   justify-content: center;
+   display: flex;
+  
 }
 
 
 .contact-info{
-   margin: 3em;
-   line-height: 2em;
-   transform: translateY(50%);
-  justify-content: center;
-  align-items: center;
+   margin: 2em;
+  
+  justify-content: flex-start;
+ 
 }
 
 .contact-info p {
    font-size:.8rem;
    justify-content: flex-start;
    float: left;
-  
+   margin-top: 1em;
    color: #fff;
    
 }
@@ -282,97 +280,31 @@ footer {
 
 
 
-.social-media{
-   display: flex;
-  justify-content: center;
-  align-items: center;
- 
-  transform: translateY(50%);
-
-   list-style: none;
-  
-}
-
-.social-media  li .fa {
-   color: #939393;
-   line-height: 2em;
-   
-}
-
-.social-media li a {
-   margin-right: 1em;
-   width: 2em;
-   height: 2em;
-   border-radius: 50%;
-   background-color: white;
-   text-align: center;
-   display: inline-block;
-   cursor: auto;
-
-  font-size: 1.5rem;
-}
-
-
-
 @media screen and (max-width:800px){
 
    
-.contact-info{
-   margin: 1em;
+   .contact-info{
+      margin: 1em;
+     
+     justify-content: flex-start;
+    
+   }
+.contact-info p {
+   font-size:.5rem;
+ 
+}
+
+.email{
+   
+   font-size:.5rem;
    
 }
-   .contact-info p{
-      font-size: .5rem;
-      justify-content: flex-start;
-      float: left;
-      
-      top: 50%;
-      color: rgb(255, 255, 255);
-      
-   }
-   .email{
-      font-size: .5rem;
-      
-   }
 
-   .social-media li a {
-      margin-right: 1em;
-      width: 2em;
-      height: 2em;
-      border-radius: 50%;
-      text-align: center;
-      display: inline-block;
-      cursor: auto;
-   
-     font-size: 1.2rem;
-   }
+
 }
 
 @media screen and (max-width:700px){
-   .contact-info p {
-      font-size: .1rem;
-      justify-content: flex-start;
-      float: left;
-      
-      top: 50%;
-     
-      
-   }
-   .email{
-      font-size:.1rem;
-      
-   }
 
-   .social-media li a {
-      margin-right: 1em;
-      width: 2em;
-      height: 2em;
-      border-radius: 50%;
-      background-color: white;
-      text-align: center;
-      display: inline-block;
-      cursor: auto;
-   
-     font-size: .9rem;
-   }
+  
+
 }
