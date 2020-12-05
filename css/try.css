@@ -19,7 +19,7 @@ img {
 /* first page*/
 
 .landingPage {
-	background-image: url(/images/bakgrund-farg.png);
+	background-image: url(../images/bakgrund-farg.png);
 	background-size: cover;
 	height: 90%;
 	margin-left: 3em;
