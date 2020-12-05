@@ -65,6 +65,20 @@
 		z-index: 9900;
 	}
 }
+
+@media screen and (max-width: 760px) {
+    .eye{
+		display: none;
+	  
+	  }
+	  
+	  .eyes .eye::before{
+		display: none;
+	}
+	.eyes{
+		display: none;
+	  }
+}
  /* end cursor eyes*/
 
 /* news ticker*/

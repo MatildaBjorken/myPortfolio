@@ -208,15 +208,9 @@ function initializeTicker(){
     setupViewport();
     animateTicker();
     
-    $ticker.on('mouseenter', function(){
-        $(this).stop(true);
-    }).on('mouseout', function(){
-        animateTicker();
-    });
 }
 
 initializeTicker();
-
 // smilie //
 
 $(window).scroll( function(){
