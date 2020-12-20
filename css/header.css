@@ -122,6 +122,21 @@ nav {
        font-family: 'Asset', cursive;
     }
 }
+
+@media screen and (max-width:650px) {
+   nav .name {
+   
+      font-size: .8rem;
+      margin-left: 2.5em;
+      align-items: center;
+      text-decoration: none;
+      display: flex;
+      text-decoration: none;
+      color: rgb(109, 99, 255);
+      text-transform: uppercase;
+      font-family: 'Asset', cursive;
+   }
+   }
  
 
 
@@ -209,6 +224,24 @@ right: 10%;
 
   
   }
+
+
+  @media screen and (max-width:650px) {
+   .burger {
+      margin-right: 2em;
+         display: block;
+         z-index: 5;
+         justify-content: flex-end;
+         color:rgb(109, 99, 255);
+         margin-top: 1em;
+         margin-bottom: 1em;
+         justify-content: flex-end;
+         width: 10%;
+         
+   
+     
+     }
+   }
 
   .burger-end{
    align-items: center;
